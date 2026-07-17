@@ -7,9 +7,9 @@ function ReviewResult({ review }) {
   if (!review) return null;
 
   return (
-    <div className="mt-8 rounded-xl border bg-white shadow-lg p-6">
+    <div className="mt-10 rounded-2xl bg-white shadow-2xl border border-slate-200 p-8">
       <div className="flex justify-between items-center mb-6">
-  <h2 className="text-2xl font-bold">🤖 AI Review</h2>
+  <h2 className="text-3xl font-bold text-slate-800">🤖 AI Review</h2>
   <CopyButton review={review} />
 </div>
 

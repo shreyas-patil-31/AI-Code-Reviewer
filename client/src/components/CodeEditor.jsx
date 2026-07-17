@@ -3,7 +3,7 @@ import Editor from "@monaco-editor/react";
 function CodeEditor({ language, code, setCode }) {
 
   return (
-    <div className="mt-8">
+    <div className="mt-8 bg-white rounded-2xl shadow-xl overflow-hidden border">
 
       <Editor
         height="500px"

@@ -51,11 +51,18 @@ return (
     <>
       <Navbar />
 
-      <div className="max-w-6xl mx-auto mt-10 px-6">
+      <div className="min-h-screen bg-slate-100">
+  <div className="max-w-7xl mx-auto px-6 py-10">
 
-        <h2 className="text-4xl font-bold mb-6">
-          Welcome to AI Code Reviewer
-        </h2>
+        <div className="mb-10 text-center">
+  <h2 className="text-5xl font-extrabold text-slate-800">
+    AI Code Reviewer
+  </h2>
+
+  <p className="text-slate-600 mt-3 text-lg">
+    Paste your code, get AI-powered feedback instantly.
+  </p>
+</div>
 
         <div className="flex justify-between items-end mt-6">
   <LanguageSelector
@@ -68,7 +75,7 @@ return (
       setCode("");
       setReview("");
     }}
-    className="bg-red-500 hover:bg-red-600 text-white px-5 py-3 rounded-lg font-semibold transition"
+    className="bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-xl font-semibold shadow-md hover:shadow-lg transition-all duration-200"
   >
     🗑 Clear Code
   </button>
@@ -87,6 +94,7 @@ return (
 
 <ReviewResult review={review} />
 
+      </div>
       </div>
     </>
   );
