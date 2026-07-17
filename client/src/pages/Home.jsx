@@ -57,16 +57,28 @@ return (
           Welcome to AI Code Reviewer
         </h2>
 
-        <LanguageSelector
-          language={language}
-          setLanguage={setLanguage}
-        />
+        <div className="flex justify-between items-end mt-6">
+  <LanguageSelector
+    language={language}
+    setLanguage={setLanguage}
+  />
 
-        <CodeEditor
-          language={language}
-          code={code}
-          setCode={setCode}
-        />
+  <button
+    onClick={() => {
+      setCode("");
+      setReview("");
+    }}
+    className="bg-red-500 hover:bg-red-600 text-white px-5 py-3 rounded-lg font-semibold transition"
+  >
+    🗑 Clear Code
+  </button>
+</div>
+
+<CodeEditor
+  language={language}
+  code={code}
+  setCode={setCode}
+/>
 
         <ReviewButton
   handleReview={handleReview}
